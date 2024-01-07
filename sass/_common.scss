@@ -122,11 +122,11 @@ h2 {
     }
 
     &::before {
-      top: -10px;
+      top: -8px;
     }
 
     &::after {
-      top: 10px;
+      top: 8px;
     }
   }
 }
@@ -183,7 +183,6 @@ body.open {
   }
 }
 
-/* ------- navigation menu ------- */
 .nav-menu {
   display: flex;
   flex-grow: 1;
@@ -213,7 +212,6 @@ body.open {
     font-size: 1.2rem;
     text-transform: uppercase;
 
-    /* 
     &::after {
       content: '';
       position: absolute;
@@ -227,7 +225,7 @@ body.open {
     &:hover::after {
       width: 100%;
     }
-*/
+
     @include mq {
       font-size: 0.8rem;
       position: relative;
@@ -235,7 +233,6 @@ body.open {
   }
 }
 
-/* ------- SNS icon ------- */
 .nav-sns {
   display: flex;
   flex-grow: 0.2;
@@ -266,15 +263,17 @@ body.open {
   }
 }
 
-/* ------- メインビジュアル ------- */
-.mv-container {
+/* ------- contents area------- */
+.container {
   margin-top: 60px;
 
   @include mq {
     margin: 0 0 0 200px;
   }
 }
-.mv-area {
+
+/* ------- main visual ------- */
+.mv {
   height: calc(100vh - 60px);
   background: url(../img/mv-bg@2x.jpg) center center;
   display: flex;
@@ -315,19 +314,18 @@ body.open {
 
 .mv-txt-datenum {
   p {
+    padding: 0.03rem 0.2rem;
     font-size: 1rem;
     margin-bottom: 8px;
     display: inline-flex;
     position: relative;
     background-color: #fff;
-    padding: 0.1em;
   }
 }
 
-.mv-txt-datenum-container {
+.mv-txt-datenum-wrapper {
   display: flex;
   align-items: center;
-  background-color: #fff;
   padding: 0.1rem 1.2rem 0.1rem 0.1rem;
 }
 
@@ -351,12 +349,12 @@ body.open {
   p {
     display: inline-flex;
     flex-direction: column;
-    padding: 0.03rem;
+    padding: 0.03rem 0.2rem;
     margin-bottom: 8px;
+    background-color: #fff;
 
     span {
       font-size: 1.8rem;
-      background-color: #fff;
 
       font-weight: 400;
 
@@ -388,13 +386,11 @@ body.open {
   flex-wrap: wrap;
 
   @include mq {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
 
-.backnum-list_item {
+.backnum-list-item {
   flex-basis: 100%;
   padding: 64px 4%;
 
