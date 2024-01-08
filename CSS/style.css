@@ -59,6 +59,7 @@ h2 {
   .header {
     width: 200px;
     height: 100vh;
+    display: flex;
     align-items: start;
   }
 }
@@ -70,6 +71,7 @@ h2 {
 @media screen and (min-width: 768px) {
   .header-logo {
     margin: 40px 20px 80px;
+    position: absolute;
   }
 }
 .header-logo img {
@@ -90,6 +92,7 @@ h2 {
   height: 60px;
   background-color: transparent;
   color: var(--link-color);
+  z-index: 20;
 }
 @media screen and (min-width: 768px) {
   .header-btn {
@@ -328,6 +331,7 @@ body.open .nav-container {
 
 .mv-txt-eng p,
 .mv-txt-jp p {
+  font-feature-settings: "palt";
   display: inline-flex;
   flex-direction: column;
   padding: 0.03rem 0.2rem;
