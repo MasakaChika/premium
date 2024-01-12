@@ -259,6 +259,14 @@ body.open .nav-container {
 }
 
 /* ------- main visual ------- */
+@keyframes mv {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .mv {
   height: calc(100vh - 60px);
   background: url(../img/mv-bg@2x.jpg) center center;
